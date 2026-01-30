@@ -1,0 +1,38 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#90EE90"/>
+  
+  <!-- Field outline -->
+  <rect x="50" y="50" width="500" height="300" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+  
+  <!-- Center line -->
+  <line x1="300" y1="50" x2="300" y2="350" stroke="#FFFFFF" stroke-width="2"/>
+  
+  <!-- Goal crease (left) -->
+  <circle cx="50" cy="200" r="30" fill="none" stroke="#CC0033" stroke-width="3"/>
+  
+  <!-- Goal crease (right) -->
+  <circle cx="550" cy="200" r="30" fill="none" stroke="#CC0033" stroke-width="3"/>
+  
+  <!-- 8-meter arc (left) -->
+  <path d="M 50 130 A 70 70 0 0 1 50 270" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- 8-meter arc (right) -->
+  <path d="M 550 130 A 70 70 0 0 0 550 270" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- 12-meter fan (left) -->
+  <path d="M 50 100 A 120 120 0 0 1 50 300" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="8,4"/>
+  
+  <!-- 12-meter fan (right) -->
+  <path d="M 550 100 A 120 120 0 0 0 550 300" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="8,4"/>
+  
+  <!-- Goal (left) -->
+  <rect x="40" y="190" width="10" height="20" fill="#CC0033"/>
+  
+  <!-- Goal (right) -->
+  <rect x="550" y="190" width="10" height="20" fill="#CC0033"/>
+  
+  <!-- Labels -->
+  <text x="300" y="30" font-family="Arial" font-size="20" font-weight="bold" fill="#333333" text-anchor="middle">Lacrosse Field - Shot Map</text>
+  <text x="300" y="385" font-family="Arial" font-size="14" fill="#333333" text-anchor="middle">Click on the field to record shot location</text>
+</svg>
