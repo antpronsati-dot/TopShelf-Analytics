@@ -29,9 +29,6 @@ Your app will be live at: `https://antpronsati-dot-topshelf-analytics.streamlit.
 ### Option 2: Local Access
 The application can also run locally on your machine:
 
-### Option 2: Local Access
-The application can also run locally on your machine:
-
 1. **Install and Run** (see [Getting Started](#-getting-started) below)
 2. **Access at:** `http://localhost:8501`
 
