@@ -4,6 +4,26 @@
 
 Custom-built for Rutgers Athletics to modernize live-game stat attribution and player performance insights.
 
+---
+
+## 🌐 Accessing the Application
+
+### Local Access (Recommended)
+The application is designed to run locally on your machine:
+
+1. **Install and Run** (see [Getting Started](#-getting-started) below)
+2. **Access at:** `http://localhost:8501`
+
+### Cloud Deployment
+Currently, there is no hosted/deployed version of this application. To deploy:
+- **Option 1**: Use [Streamlit Community Cloud](https://streamlit.io/cloud) (free)
+- **Option 2**: Deploy to Heroku, AWS, or other cloud platforms
+- **Option 3**: Run locally as shown above
+
+> **Note:** For live game use, we recommend running locally on an iPad or tablet for best performance and reliability.
+
+---
+
 ## 🎯 Features
 
 ### Visual Interface
@@ -125,6 +145,35 @@ COLORS = {
 - **Plotly**: Interactive data visualizations
 - **Pandas**: Data manipulation and analysis
 - **Python 3.8+**: Core programming language
+
+## 🚀 Deployment Options
+
+### Streamlit Community Cloud (Recommended)
+Deploy for free to Streamlit's cloud platform:
+
+1. Fork this repository to your GitHub account
+2. Go to [share.streamlit.io](https://share.streamlit.io)
+3. Sign in with GitHub
+4. Click "New app"
+5. Select your forked repository
+6. Set main file path: `app.py`
+7. Click "Deploy"
+
+Your app will be available at: `https://[your-app-name].streamlit.app`
+
+### Local Network Deployment
+Run on your local network for team access:
+
+```bash
+streamlit run app.py --server.address 0.0.0.0 --server.port 8501
+```
+
+Access from other devices on your network at: `http://[your-ip-address]:8501`
+
+### Other Platforms
+- **Heroku**: Use the [Streamlit Heroku buildpack](https://github.com/heroku/heroku-buildpack-python)
+- **AWS/Azure/GCP**: Deploy as a containerized application
+- **Docker**: Create a Dockerfile with Streamlit and your app
 
 ## 📝 Future Enhancements
 
