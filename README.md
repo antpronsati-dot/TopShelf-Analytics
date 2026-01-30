@@ -4,7 +4,7 @@ TopShelf Analytics: High-performance spatial data tracking and visual shot-mappi
 ## 🚀 How to Open and Run app.py
 
 ### Prerequisites
-- Python 3.7 or higher installed on your system
+- Python 3.8 or higher installed on your system
 - pip (Python package manager)
 
 ### Installation & Setup
@@ -32,7 +32,7 @@ TopShelf Analytics: High-performance spatial data tracking and visual shot-mappi
 
 ### Usage
 Once the app is running, you can:
-- Select active players from the sidebar roster
+- Select the current active player from the sidebar roster
 - Track shots, goals, saves, and misses on the interactive shot chart
 - Record ground balls, turnovers, caused turnovers, and assists
 - View live game statistics and shooting efficiency charts
