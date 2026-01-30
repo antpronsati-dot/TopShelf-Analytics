@@ -6,21 +6,36 @@ Custom-built for Rutgers Athletics to modernize live-game stat attribution and p
 
 ---
 
+## 🚀 Quick Deploy
+
+[![Deploy to Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=antpronsati-dot/TopShelf-Analytics&branch=main&mainModule=app.py)
+
+**Want a live web link?** Click the button above or see [DEPLOY.md](DEPLOY.md) for a 3-minute setup guide!
+
+Your app will be live at: `https://antpronsati-dot-topshelf-analytics.streamlit.app`
+
+---
+
 ## 🌐 Accessing the Application
 
-### Local Access (Recommended)
-The application is designed to run locally on your machine:
+### Option 1: Deploy to Cloud (Easiest - Get a Web Link!)
+1. Click the deploy button above
+2. Sign in with GitHub  
+3. Click "Deploy"
+4. Your app is live in 2 minutes! 🎉
+
+👉 **[See detailed deployment guide](DEPLOY.md)**
+
+### Option 2: Local Access
+The application can also run locally on your machine:
+
+### Option 2: Local Access
+The application can also run locally on your machine:
 
 1. **Install and Run** (see [Getting Started](#-getting-started) below)
 2. **Access at:** `http://localhost:8501`
 
-### Cloud Deployment
-Currently, there is no hosted/deployed version of this application. To deploy:
-- **Option 1**: Use [Streamlit Community Cloud](https://streamlit.io/cloud) (free)
-- **Option 2**: Deploy to Heroku, AWS, or other cloud platforms
-- **Option 3**: Run locally as shown above
-
-> **Note:** For live game use, we recommend running locally on an iPad or tablet for best performance and reliability.
+> **Note:** Cloud deployment gives you a permanent web link that works on any device!
 
 ---
 
