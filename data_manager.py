@@ -52,7 +52,12 @@ class GameDataManager:
         if not self.game_events:
             return pd.DataFrame()
         df = self.get_dataframe()
-        return df.groupby(['Player', 'Action']).size().unstack(fill_value=0)
+        try:
+            return df.groupby(['Player', 'Action']).size().unstack(fill_value=0)
+        except ValueError:
+            # Fallback for cases where unstack fails (e.g., single player or action)
+            summary = df.groupby(['Player', 'Action']).size().reset_index(name='Count')
+            return summary.pivot(index='Player', columns='Action', values='Count').fillna(0)
     
     def get_shot_data(self) -> pd.DataFrame:
         """Get only shooting-related events."""

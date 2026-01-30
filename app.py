@@ -93,6 +93,7 @@ with st.sidebar:
         st.session_state.data_manager.clear_data()
         st.session_state.shot_pending = False
         st.session_state.shot_coords = None
+        st.session_state.on_field = set(DEFAULT_ROSTER[:7])  # Reset to initial 7 players
         st.rerun()
 
 # --- MAIN DASHBOARD ---
@@ -109,9 +110,9 @@ with tab1:
         # Load and display the lacrosse field
         field_path = os.path.join(os.path.dirname(__file__), "assets", "lacrosse_field.svg")
         if os.path.exists(field_path):
-            with open(field_path, 'r') as f:
-                field_svg = f.read()
             st.image(field_path, use_container_width=True)
+        else:
+            st.warning("⚠️ Lacrosse field image not found. Please ensure assets/lacrosse_field.svg exists.")
         
         # Create interactive shot chart using Plotly
         shot_data = st.session_state.data_manager.get_shot_data()
@@ -150,7 +151,7 @@ with tab1:
         
         # Shot recording interface
         st.markdown("#### Record Shot Location")
-        st.info("👆 Click on the field above to record a shot location (coordinate-based tracking coming in next update)")
+        st.info("👆 Use the sliders below to set shot coordinates (X/Y position on field)")
         
         # For now, use a simplified coordinate input
         col_x, col_y = st.columns(2)
@@ -363,11 +364,13 @@ with tab3:
         
         # Export option
         st.markdown("---")
+        from datetime import datetime
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         csv = df.to_csv(index=False)
         st.download_button(
             label="📥 Download Game Data (CSV)",
             data=csv,
-            file_name="topshelf_game_data.csv",
+            file_name=f"topshelf_game_data_{timestamp}.csv",
             mime="text/csv"
         )
     else:
